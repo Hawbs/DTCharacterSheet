@@ -1,8 +1,10 @@
 /* Set the min-width so that when the window is resized the look will stay consistant */
+/* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap'); */
 
 .charsheet {
-	background-color: rgb(255, 255, 255)255, 255, 255);
-	min-width: 800px;
+	background-color: rgb(255, 255, 255);
+	min-width: 900px;
+	max-width: 920px;
 }
 
 /* Universal styling applied to all elements of these types */
@@ -11,6 +13,7 @@ h2 {
 	font-size: 2em;
 	margin-bottom: 10px;
 	text-align: center;
+	/* font-family: 'Cinzel', serif; */
 }
 
 label {
