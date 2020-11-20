@@ -1,5 +1,5 @@
 /* Set the min-width so that when the window is resized the look will stay consistant */
-/* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap'); */
+ @import url('https://fonts.googleapis.com/css?family=Cinzel:wght@700&display=swap');
 
 .charsheet {
 	background-color: rgb(255, 255, 255);
@@ -13,7 +13,8 @@ h2 {
 	font-size: 2em;
 	margin-bottom: 10px;
 	text-align: center;
-	/* font-family: 'Cinzel', serif; */
+	font-family: 'Cinzel', serif;
+
 }
 
 label {
@@ -21,9 +22,35 @@ label {
 	width: 31%;
 }
 
+.sheet-aslabel {
+
+	width: 50%;
+}
+
+.sheet-aclabel {
+
+	width: 50%;
+}
+
+.sheet-dmlabel {
+
+	width: 45%;
+}
+
+.sheet-hplabel {
+
+	width: 40%;
+}
+
+.sheet-drlabel {
+
+	width: 50%;
+}
+
 input {
 	display: inline-block;
 	width: 165px;
+
 }
 
 img {

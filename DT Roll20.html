@@ -1,14 +1,24 @@
 <div class="3colrow">
     <div class="col">
-    	<label>Character Name:</label><input type="text" name="attr_character_name" />
-		<label>Level:</label><input type="text" name="attr_level" />
-		<label>Experience:</label><input type="number" name="attr_xp" />
+        <label>Character Name:</label><input type="text" name="attr_character_name" />
+        <br />
+        <label>Level:</label><input type="number" name="attr_level" />
+        <br />
+        <label>Exp:</label><input type="number" name="attr_exp" />
+        <br />
+        <label>Alighnment:</label><input type="text" name="attr_alighnment" />
+        <br />
 	</div>
 
 	<div class="col">
         <label>Player Name:</label><input type="text" name="attr_player_name" />
-		<label>Setting:</label><input type="text" name="attr_setting" />
+        <br />
+        <label>Background:</label><input type="text" name="attr_background" />
+        <br />
         <label>Race:</label><input type="text" name="attr_race" />
+        <br />
+        <label>Deity:</label><input type="text" name="attr_deity" />
+        <br />
 	</div>
 
 	<div class="col">
@@ -25,9 +35,9 @@
 	<div class="col">
 		<h2>Ability Scores</h2>
 
-        <label>Might </label><input type="number" name='attr_might' class='sheet-short'Value="0">
+        <label class="sheet-aslabel">Might </label><input type="number" name='attr_might' class='sheet-short'Value="0">
         <br />
-        <label>Die </label><select name="attr_mightDie" class="dtype">
+        <label class="sheet-aslabel">Die </label><select name="attr_mightDie" class="dtype">
             <option value="d6">d6</option>
             <option value="d8">d8</option>
             <option value="d10">d10</option>
@@ -35,9 +45,9 @@
         </select>
         <br />
         
-        <label>Skill </label><input type="number" name='attr_skill' class='sheet-short'Value="0">
+        <label class="sheet-aslabel">Skill </label><input type="number" name='attr_skill' class='sheet-short'Value="0">
         <br />
-        <label>Die </label><select name="attr_skillDie" class="dtype">
+        <label class="sheet-aslabel">Die </label><select name="attr_skillDie" class="dtype">
             <option value="d6">d6</option>
             <option value="d8">d8</option>
             <option value="d10">d10</option>
@@ -45,9 +55,9 @@
         </select>
         <br />
                 
-        <label>Body </label><input type="number" name='attr_body' class='sheet-short'Value="0">
+        <label class="sheet-aslabel">Body </label><input type="number" name='attr_body' class='sheet-short'Value="0">
         <br />
-        <label>Die </label><select name="attr_bodyDie" class="dtype">
+        <label class="sheet-aslabel">Die </label><select name="attr_bodyDie" class="dtype">
             <option value="d6">d6</option>
             <option value="d8">d8</option>
             <option value="d10">d10</option>
@@ -55,9 +65,9 @@
         </select>
         <br />
                 
-        <label>Mind </label><input type="number" name='attr_mind' class='sheet-short'Value="0">
+        <label class="sheet-aslabel">Mind </label><input type="number" name='attr_mind' class='sheet-short'Value="0">
         <br />
-        <label>Die </label><select name="attr_mindDie" class="dtype">
+        <label class="sheet-aslabel">Die </label><select name="attr_mindDie" class="dtype">
             <option value="d6">d6</option>
             <option value="d8">d8</option>
             <option value="d10">d10</option>
@@ -65,9 +75,9 @@
         </select>
         <br />
                 
-        <label>Memory </label><input type="number" name='attr_memory' class='sheet-short'Value="0">
+        <label class="sheet-aslabel">Memory </label><input type="number" name='attr_memory' class='sheet-short'Value="0">
         <br />
-        <label>Die </label><select name="attr_memoryDie" class="dtype">
+        <label class="sheet-aslabel">Die </label><select name="attr_memoryDie" class="dtype">
             <option value="d6">d6</option>
             <option value="d8">d8</option>
             <option value="d10">d10</option>
@@ -75,9 +85,9 @@
         </select>
         <br />
 
-        <label>Character </label><input type="number" name='attr_character' class='sheet-short'Value="0">
+        <label class="sheet-aslabel">Character </label><input type="number" name='attr_character' class='sheet-short'Value="0">
         <br />
-        <label>Die </label><select name="attr_characterDie" class="dtype">
+        <label class="sheet-aslabel">Die </label><select name="attr_characterDie" class="dtype">
             <option value="d6">d6</option>
             <option value="d8">d8</option>
             <option value="d10">d10</option>
@@ -98,26 +108,30 @@
 		<h2>Defensive Options</h2>
         <div class="stats">
             <h3>Current</h3><h3>Total</h3>
-            <label>HitPoints</label><input type="number" name= attr_totalHP Value="0" /><input type="number" name= attr_currentHP Value="0" />
+            <label class="sheet-hplabel">HitPoints</label><input type="number" name= attr_totalHP Value="0" /><input type="number" name= attr_currentHP Value="0" />
         </div>
         <div class="stats">
             <h3>Injured</h3><h3>Temp</h3>
-            <label></label><input type="number" name= attr_injuredHP Value="0" /><input type="number" name= attr_tempHP Value="0"/>
+            <label class="sheet-hplabel"></label><input type="number" name= attr_injuredHP Value="0" /><input type="number" name= attr_tempHP Value="0"/>
         </div>
 
-        <label>Physical Defense</label><input type="number" name="attr_defense" class='sheet-short' Value="@{defenseArmor}+@{defenseNatural}+@{defenseMisc}" disabled="true"> = 
+        <hr/>
+
+        <label class="sheet-drlabel">Physical Defense</label><input type="number" name="attr_defense" class='sheet-short' Value="@{defenseArmor}+@{defenseNatural}+@{defenseMisc}" disabled="true"> 
         <br />
         <input type="number" name="attr_defenseArmor" class='sheet-short' Value="0"> + 
         <input type="number" name="attr_defenseNatural" class='sheet-short' Value="0"> +
         <input type="number" name="attr_defenseMisc" class='sheet-short' Value="0">
-
-        <label>Magical Resistance</label><input type="number" name="attr_resistance" class='sheet-short' Value="@{resistanceArmor}+@{resistanceNatural}+@{resistanceMisc}" disabled="true"> = 
+        <br />
+        <label class="sheet-drlabel">Magical Resistance</label><input type="number" name="attr_resistance" class='sheet-short' Value="@{resistanceArmor}+@{resistanceNatural}+@{resistanceMisc}" disabled="true"> 
         <br />
         <input type="number" name="attr_resistanceArmor" class='sheet-short' Value="0"> + 
         <input type="number" name="attr_resistanceNatural" class='sheet-short' Value="0"> +
         <input type="number" name="attr_resistanceMisc" class='sheet-short' Value="0">    
-            
-        <label>Defense Die</label><select name="attr_defenseDie" class="dtype">
+        
+        <hr/>
+
+        <label class="sheet-aclabel">Defense Die</label><select name="attr_defenseDie" class="dtype">
             <option value="d2">d2</option>
             <option value="d4">d4</option>
             <option value="d6">d6</option>
@@ -127,7 +141,7 @@
         </select>
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[1@{defenseDie} + @{defense}]]}}'></button>
         <br />
-        <label>Resistance Die</label><select name="attr_resistanceDie" class="dtype">
+        <label class="sheet-aclabel">Resistance Die</label><select name="attr_resistanceDie" class="dtype">
             <option value="d2">d2</option>
             <option value="d4">d4</option>
             <option value="d6">d6</option>
@@ -270,105 +284,134 @@
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[1@{weapondamage6} + @{weapontype6})]]}}'></button>
         <br />
         <input type="text">
-        <br />
 
+        <hr/>
+
+        <h2>Equipment</h2>
+        <textarea name="attr_equipment"></textarea>
 
 
 	</div>
     
 	<div class="col">
 
+        <h2>Saving Throws</h2>
+       
+        <label class="sheet-aclabel">Endurance</label><input type="number" name="attr_endurance"class='sheet-short' Value="0"><input type="number" name="attr_enduranceMisc"class='sheet-short' Value="0">
+        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{bodyDie} + (@{body} + @{endurance} + @{enduranceMisc}) /3)]]}}'></button>
+
+        <label class="sheet-aclabel">Evade</label><input type="number" name="attr_evade"class='sheet-short' Value="0"><input type="number" name="attr_evadeMisc"class='sheet-short' Value="0">
+        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{skillDie} + (@{skill} + @{evade} + @{evadeMisc}) /3)]]}}'></button>
+
+        <label class="sheet-aclabel">Resolve</label><input type="number" name="attr_resolve"class='sheet-short' Value="0"><input type="number" name="attr_resolveMisc"class='sheet-short' Value="0">
+        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{memoryDie} + (@{memory} + @{resolve} + @{resolveMisc}) /3)]]}}'></button>
+
         <h2>Ability Checks</h2>
 
-        <label>Acrobatics</label><input type="number" name="attr_acrobatics"class='sheet-short' Value="0"><input type="number" name="attr_acrobaticsMisc"class='sheet-short' Value="0">
+        <label class="sheet-aclabel">Acrobatics</label><input type="number" name="attr_acrobatics"class='sheet-short' Value="0"><input type="number" name="attr_acrobaticsMisc"class='sheet-short' Value="0">
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{skillDie} + (@{skill} + @{acrobatics} + @{acrobaticsMisc}) /3)]]}}'></button>
 
-        <label>Athletics</label><input type="number" name="attr_athletics"class='sheet-short' Value="0"><input type="number" name="attr_athleticsMisc"class='sheet-short' Value="0">
+        <label class="sheet-aclabel">Athletics</label><input type="number" name="attr_athletics"class='sheet-short' Value="0"><input type="number" name="attr_athleticsMisc"class='sheet-short' Value="0">
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{mightDie} + (@{might} + @{athletics} + @{athleticsMisc}) /3)]]}}'></button>
 
-        <label>Craft</label><input type="number" name="attr_craft"class='sheet-short' Value="0"><input type="number" name="attr_craftMisc"class='sheet-short' Value="0">
+        <label class="sheet-aclabel">Craft</label><input type="number" name="attr_craft"class='sheet-short' Value="0"><input type="number" name="attr_craftMisc"class='sheet-short' Value="0">
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{mindDie} + (@{mind} + @{craft} + @{craftMisc}) /3)]]}}'></button>
 
-        <label>Deception</label><input type="number" name="attr_deception"class='sheet-short' Value="0"><input type="number" name="attr_deceptionMisc"class='sheet-short' Value="0">
+        <label class="sheet-aclabel">Deception</label><input type="number" name="attr_deception"class='sheet-short' Value="0"><input type="number" name="attr_deceptionMisc"class='sheet-short' Value="0">
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{characterDie} + (@{character} + @{deception} + @{deceptionMisc}) /3)]]}}'></button>
 
-        <label>Grab_Break</label><input type="number" name="attr_grabBreak"class='sheet-short' Value="0"><input type="number" name="attr_grabBreakMisc"class='sheet-short' Value="0">
+        <label class="sheet-aclabel">Grab_Break</label><input type="number" name="attr_grabBreak"class='sheet-short' Value="0"><input type="number" name="attr_grabBreakMisc"class='sheet-short' Value="0">
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{mightDie} + (@{might} + @{grabBreak} + @{grabBreakMisc}) /3)]]}}'></button>
 
-        <label>Grapple</label><input type="number" name="attr_grapple"class='sheet-short' Value="0"><input type="number" name="attr_grappleMisc"class='sheet-short' Value="0">
+        <label class="sheet-aclabel">Grapple</label><input type="number" name="attr_grapple"class='sheet-short' Value="0"><input type="number" name="attr_grappleMisc"class='sheet-short' Value="0">
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{mightDie} + (@{might} + @{grapple} + @{grappleMisc}) /3)]]}}'></button>
 
-        <label>Intimidation</label><input type="number" name="attr_intimidation"class='sheet-short' Value="0"><input type="number" name="attr_intimidationMisc"class='sheet-short' Value="0">
+        <label class="sheet-aclabel">Intimidation</label><input type="number" name="attr_intimidation"class='sheet-short' Value="0"><input type="number" name="attr_intimidationMisc"class='sheet-short' Value="0">
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{characterDie} + (@{character} + @{intimidation} + @{intimidationMisc}) /3)]]}}'></button>
 
-        <label>Intuition</label><input type="number" name="attr_intuition"class='sheet-short' Value="0"><input type="number" name="attr_intuitionMisc"class='sheet-short' Value="0">
+        <label class="sheet-aclabel">Intuition</label><input type="number" name="attr_intuition"class='sheet-short' Value="0"><input type="number" name="attr_intuitionMisc"class='sheet-short' Value="0">
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{characterDie} + (@{character} + @{intuition} + @{intuitionMisc}) /3)]]}}'></button>
 
-        <label>Investigation</label><input type="number" name="attr_investigation"class='sheet-short' Value="0"><input type="number" name="attr_investigationMisc"class='sheet-short' Value="0">
+        <label class="sheet-aclabel">Investigation</label><input type="number" name="attr_investigation"class='sheet-short' Value="0"><input type="number" name="attr_investigationMisc"class='sheet-short' Value="0">
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{mindDie} + (@{mind} + @{investigation} + @{investigationMisc}) /3)]]}}'></button>
 
-        <label>Knowledge</label><input type="number" name="attr_knowledge"class='sheet-short' Value="0"><input type="number" name="attr_knowledgeMisc"class='sheet-short' Value="0">
+        <label class="sheet-aclabel">Knowledge</label><input type="number" name="attr_knowledge"class='sheet-short' Value="0"><input type="number" name="attr_knowledgeMisc"class='sheet-short' Value="0">
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{mindDie} + (@{mind} + @{knowledge} + @{knowledgeMisc}) /3)]]}}'></button>
 
-        <label>Medicine</label><input type="number" name="attr_medicine"class='sheet-short' Value="0"><input type="number" name="attr_medicineMisc"class='sheet-short' Value="0">
+        <label class="sheet-aclabel">Medicine</label><input type="number" name="attr_medicine"class='sheet-short' Value="0"><input type="number" name="attr_medicineMisc"class='sheet-short' Value="0">
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{memoryDie} + (@{memory} + @{medicine} + @{medicineMisc}) /3)]]}}'></button>
 
-        <label>Nature</label><input type="number" name="attr_nature"class='sheet-short' Value="0"><input type="number" name="attr_natureMisc"class='sheet-short' Value="0">
+        <label class="sheet-aclabel">Nature</label><input type="number" name="attr_nature"class='sheet-short' Value="0"><input type="number" name="attr_natureMisc"class='sheet-short' Value="0">
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{memoryDie} + (@{memory} + @{nature} + @{natureMisc}) /3)]]}}'></button>
 
-        <label>Perception</label><input type="number" name="attr_perception"class='sheet-short' Value="0"><input type="number" name="attr_perceptionMisc"class='sheet-short' Value="0">
+        <label class="sheet-aclabel">Perception</label><input type="number" name="attr_perception"class='sheet-short' Value="0"><input type="number" name="attr_perceptionMisc"class='sheet-short' Value="0">
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{memoryDie} + (@{memory} + @{perception} + @{perceptionMisc}) /3)]]}}'></button>
 
-        <label>Performance</label><input type="number" name="attr_performance"class='sheet-short' Value="0"><input type="number" name="attr_performanceMisc"class='sheet-short' Value="0">
+        <label class="sheet-aclabel">Performance</label><input type="number" name="attr_performance"class='sheet-short' Value="0"><input type="number" name="attr_performanceMisc"class='sheet-short' Value="0">
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[floor(1@{characterDie} + (@{character} + @{performance} + @{performanceMisc}) /3)]]}}'></button>
 
-        <label>Persuasion</label><input type="number" name="attr_persuasion"class='sheet-short' Value="0"><input type="number" name="attr_persuasionMisc"class='sheet-short' Value="0">
+        <label class="sheet-aclabel">Persuasion</label><input type="number" name="attr_persuasion"class='sheet-short' Value="0"><input type="number" name="attr_persuasionMisc"class='sheet-short' Value="0">
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{characterDie} + (@{character} + @{persuasion} + @{persuasionMisc}) /3)]]}}'></button>
 
-        <label>Sleight_of_Hand</label><input type="number" name="attr_sleightOfHand"class='sheet-short' Value="0"><input type="number" name="attr_sleightOfHandMisc"class='sheet-short' Value="0">
+        <label class="sheet-aclabel">Sleight_of_Hand</label><input type="number" name="attr_sleightOfHand"class='sheet-short' Value="0"><input type="number" name="attr_sleightOfHandMisc"class='sheet-short' Value="0">
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{skillDie} + (@{skill} + @{sleightOfHand} + @{sleightOfHandMisc}) /3)]]}}'></button>
 
-        <label>Stealth</label><input type="number" name="attr_stealth"class='sheet-short' Value="0"><input type="number" name="attr_stealthMisc"class='sheet-short' Value="0">
+        <label class="sheet-aclabel">Stealth</label><input type="number" name="attr_stealth"class='sheet-short' Value="0"><input type="number" name="attr_stealthMisc"class='sheet-short' Value="0">
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[1floor(@{skillDie} + (@{skill} + @{stealth} + @{stealthMisc}) /3)]]}}'></button>
 
-        <label>Survival</label><input type="number" name="attr_survival"class='sheet-short' Value="0"><input type="number" name="attr_survivalMisc"class='sheet-short' Value="0">
+        <label class="sheet-aclabel">Survival</label><input type="number" name="attr_survival"class='sheet-short' Value="0"><input type="number" name="attr_survivalMisc"class='sheet-short' Value="0">
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{memoryDie} + (@{memory} + @{survival} + @{survivalMisc}) /3)]]}}'></button>
 
-        <label>Trip</label><input type="number" name="attr_trip"class='sheet-short' Value="0"><input type="number" name="attr_tripMisc"class='sheet-short' Value="0">
+        <label class="sheet-aclabel">Trip</label><input type="number" name="attr_trip"class='sheet-short' Value="0"><input type="number" name="attr_tripMisc"class='sheet-short' Value="0">
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{skillDie} + (@{skill} + @{trip} + @{tripMisc}) /3)]]}}'></button>
 
-        <label>Use_Device</label><input type="number" name="attr_useDevice"class='sheet-short' Value="0"><input type="number" name="attr_useDeviceMisc"class='sheet-short' Value="0">
+        <label class="sheet-aclabel">Use_Device</label><input type="number" name="attr_useDevice"class='sheet-short' Value="0"><input type="number" name="attr_useDeviceMisc"class='sheet-short' Value="0">
         <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[floor(1@{mindDie} + (@{mind} + @{useDevice} + @{useDeviceMisc}) /3)]]}}'></button>
-        
-        <h2">Saving Thows</h2>
-       
-       
 
-        <h2">Damage Modifiers</h2>
+        <h2>Damage Modifiers</h2>
 
-        <label>Light</label><input type="number" name="attr_light"class='sheet-short' Value="0"><input type="number" name="attr_lightMisc"class='sheet-short' Value="0">
+        <label class="sheet-dmlabel">Light</label><input type="number" name="attr_light"class='sheet-short' Value="0"><input type="number" name="attr_lightMisc"class='sheet-short' Value="0">
         <Span><input type="number" name="attr_lightValue" value="floor((@{skill}+@{light}+@{lightMisc})/3)" disabled="true" ></Span>
 
-        <label>Heavy</label><input type="number" name="attr_heavy"class='sheet-short' Value="0"><input type="number" name="attr_heavyMisc"class='sheet-short' Value="0">
+        <label class="sheet-dmlabel">Heavy</label><input type="number" name="attr_heavy"class='sheet-short' Value="0"><input type="number" name="attr_heavyMisc"class='sheet-short' Value="0">
         <Span><input type="number" name="attr_heavyValue" value="floor((@{might}+@{heavy}+@{heavyMisc})/3)" disabled="true" ></Span>
         
-        <label>Two_Handed</label><input type="number" name="attr_two-handed"class='sheet-short' Value="0"><input type="number" name="attr_two-handedMisc"class='sheet-short' Value="0">
-        <Span><input type="number" name="attr_two-handedValue" value="floor((@{might}+@{two-handed}+@{two-handedMisc})/3)" disabled="true" ></Span>
+        <label class="sheet-dmlabel">Two_Handed</label><input type="number" name="attr_two-handed"class='sheet-short' Value="0"><input type="number" name="attr_two-handedMisc"class='sheet-short' Value="0">
+        <Span><input type="number" name="attr_two-handedValue" value="floor((@{might}+@{two-handed}+@{two-handedMisc})/2)" disabled="true" ></Span>
 
-        <label>Bow</label><input type="number" name="attr_bow"class='sheet-short' Value="0"><input type="number" name="attr_bowMisc"class='sheet-short' Value="0">
+        <label class="sheet-dmlabel">Bow</label><input type="number" name="attr_bow"class='sheet-short' Value="0"><input type="number" name="attr_bowMisc"class='sheet-short' Value="0">
         <Span><input type="number" name="attr_bowValue" value="floor((@{skill}+@{bow}+@{bowMisc})/3)" disabled="true" ></Span>
 
-        <label>Crossbow</label><input type="number" name="attr_crossbow"class='sheet-short' Value="0"><input type="number" name="attr_crossbowMisc"class='sheet-short' Value="0">
-        <Span><input type="number" name="attr_crossbowValue" value="floor((@{skill}+@{crossbow}+@{crossbowMisc})/3)" disabled="true" ></Span>
+        <label class="sheet-dmlabel">Crossbow</label><input type="number" name="attr_crossbow"class='sheet-short' Value="0"><input type="number" name="attr_crossbowMisc"class='sheet-short' Value="0">
+        <Span><input type="number" name="attr_crossbowValue" value="floor((@{skill}+@{crossbow}+@{crossbowMisc})/2)" disabled="true" ></Span>
 
-        <label>Thrown</label><input type="number" name="attr_thrown"class='sheet-short' Value="0"><input type="number" name="attr_thrownMisc"class='sheet-short' Value="0">
+        <label class="sheet-dmlabel">Thrown</label><input type="number" name="attr_thrown"class='sheet-short' Value="0"><input type="number" name="attr_thrownMisc"class='sheet-short' Value="0">
         <Span><input type="number" name="attr_thrownValue" value="floor((@{might}+@{thrown}+@{thrownMisc})/3)" disabled="true" ></Span>
         
 
-        <h2">Statistics</h2>
+        <h2>Statistics</h2>
 
-        <h2">Additional Modifiers</h2>
+        <label class="sheet-dmlabel">Attunement</label><input type="number" name="attr_attunement"class='sheet-short' Value="0"><input type="number" name="attr_attunementMisc"class='sheet-short' Value="0">
+        <Span><input type="number" name="attr_attunementValue" value="floor((@{memory}+@{attunement}+@{attunementMisc})/4)" disabled="true" ></Span>
+        
+        <label class="sheet-dmlabel">Carry</label><input type="number" name="attr_carry"class='sheet-short' Value="0"><input type="number" name="attr_carryMisc"class='sheet-short' Value="0">
+        <Span><input type="number" name="attr_carryValue" value="floor((@{body}+@{carry}+@{carryMisc}))" disabled="true" ></Span>
+        
+        <label class="sheet-dmlabel">Defense</label><input type="number" name="attr_defenseStat"class='sheet-short' Value="0"><input type="number" name="attr_defenseStatMisc"class='sheet-short' Value="0">
+        <Span><input type="number" name="attr_defenseStatValue" value="floor((@{body}+@{defenseStat}+@{defenseStatMisc})/6)" disabled="true" ></Span>
+        
+        <label class="sheet-dmlabel">Linguistics</label><input type="number" name="attr_linguis"class='sheet-short' Value="0"><input type="number" name="attr_linguisMisc"class='sheet-short' Value="0">
+        <Span><input type="number" name="attr_linguisValue" value="floor((@{mind}+@{linguis}+@{linguisMisc})/6)" disabled="true" ></Span>
+        
+        <label class="sheet-dmlabel">Resistance</label><input type="number" name="attr_resistanceStat"class='sheet-short' Value="0"><input type="number" name="attr_resistanceStatMisc"class='sheet-short' Value="0">
+        <Span><input type="number" name="attr_resistanceStatValue" value="floor((@{memory}+@{resistanceStat}+@{resistanceStatMisc})/6)" disabled="true" ></Span>
+        
+        <label class="sheet-dmlabel">Vitality</label><input type="number" name="attr_vitality"class='sheet-short' Value="0"><input type="number" name="attr_vitalityMisc"class='sheet-short' Value="0">
+        <Span><input type="number" name="attr_vitalityValue" value="floor((@{body}+@{vitality}+@{vitalityMisc}))" disabled="true" ></Span>
+        
+        <h2>Additional Modifiers</h2>
 
+        <textarea name="attr_addMods"></textarea>
 	</div>
 
 </div>
